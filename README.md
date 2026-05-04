@@ -1,4 +1,4 @@
-# 🛡️ Security Incident Dashboard
+# Security Incident Dashboard
 
 A beginner-level web dashboard for visualizing security incidents, built with Python, Flask, SQLite, and Plotly.
 
@@ -6,7 +6,7 @@ This is a personal portfolio project developed to practice web development and d
 
 ---
 
-## 📊 Features
+## Features
 
 - **Incidents by Type** — Bar chart showing the distribution of attack types (Malware, Phishing, DDoS, Social Engineering, Unauthorized Access)
 - **Incidents by Severity** — Donut chart showing the proportion of High, Medium, and Low severity incidents
@@ -14,7 +14,7 @@ This is a personal portfolio project developed to practice web development and d
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Python, Flask, Flask-SQLAlchemy
 - **Database:** SQLite
@@ -23,7 +23,7 @@ This is a personal portfolio project developed to practice web development and d
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository
 ```bash
@@ -56,7 +56,7 @@ python3 IncidentsDashboard.py
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 security-dashboard/
@@ -70,7 +70,7 @@ security-dashboard/
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 - This is a beginner project built for learning purposes
 - Incident data is simulated and does not represent real events
@@ -78,7 +78,7 @@ security-dashboard/
 
 ---
 
-## 👤 Author
+## Author
 
 **Jhonathan da Silva de Sá**  
 Information Security Technologist  
