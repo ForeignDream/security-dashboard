@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Dashboard de analise de Incidentes</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+     </head>
+  <body>
+    <div id="grafico-tipos"></div>
+    <div id="grafico-severidades"></div>
+    <div id="grafico-meses"></div>
+    <script>
+    fetch('/api/tipos')
+    .then(response => response.json())
+    .then(data => {
+        const labels = Object.keys(data);
+        const values = Object.values(data);
+        
+        Plotly.newPlot('grafico-tipos', [{
+            type: 'bar',
+            x: labels,
+            y: values
+        }], {
+            title: 'Incidentes por Tipo'
+        });
+    });
+
+    fetch('/api/severidade')
+    .then(response => response.json())
+    .then(data => {
+        const labels = Object.keys(data);
+        const values = Object.values(data);
+        
+        Plotly.newPlot('grafico-severidades', [{
+            type: 'pie',
+            hole: 0.3,
+            labels: labels,
+            values: values
+        }], {
+            title: ' Distribuição de Severidade '
+        });
+    });
+
+    fetch('/api/meses')
+    .then(response => response.json())
+    .then(data => {
+        const labels = Object.keys(data);
+        const values = Object.values(data);
+        
+        Plotly.newPlot('grafico-meses', [{
+            type: 'scatter',
+            mode: 'lines+markers',
+            x: labels,
+            y: values
+        }], {
+            title: ' Incidentes por Mês '
+        });
+    });
+
+
+
+    </script>
+  </body>
+</html>
